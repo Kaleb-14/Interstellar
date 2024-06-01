@@ -1,11 +1,12 @@
-/*
 // Ads
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   function adChange(selectedValue) {
     if (selectedValue === "default") {
-      localStorage.setItem("ad", "on")
-    } else if (selectedValue === "banner") {
-      localStorage.setItem("ad", "banner")
+      localStorage.setItem("ads", "on")
+    } else if (selectedValue === "popups") {
+      localStorage.setItem("ads", "popups")
+    } else if (selectedValue === "off") {
+      localStorage.setItem("ads", "off")
     }
   }
 
@@ -17,29 +18,31 @@ document.addEventListener("DOMContentLoaded", function () {
       adChange(selectedOption)
     })
 
-    var storedAd = localStorage.getItem("ad")
+    var storedAd = localStorage.getItem("ads")
     if (storedAd === "on") {
       adTypeElement.value = "default"
-    } else if (storedAd === "banner") {
-      adTypeElement.value = "banner"
+    } else if (storedAd === "popups") {
+      adTypeElement.value = "popups"
+    } else if (storedAd === "off") {
+      adTypeElement.value = "off"
     } else {
       adTypeElement.value = "default"
     }
-  } */
+  }
+  // Makes the custom icon and name persistent
+  const iconElement = document.getElementById("icon")
+  const nameElement = document.getElementById("name")
+  const customIcon = localStorage.getItem("CustomIcon")
+  const customName = localStorage.getItem("CustomName")
+  iconElement.value = customIcon
+  nameElement.value = customName
 
-// Makes the custom icon and name persistent
-const iconElement = document.getElementById("icon")
-const nameElement = document.getElementById("name")
-const customIcon = localStorage.getItem("CustomIcon")
-const customName = localStorage.getItem("CustomName")
-iconElement.value = customIcon
-nameElement.value = customName
-
-localStorage.setItem("ab", true)
-document.getElementById("ab-settings-switch").checked = true
+  localStorage.setItem("ab", true)
+  document.getElementById("ab-settings-switch").checked = true
+})
 
 // Dyn
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   function pChange(selectedValue) {
     if (selectedValue === "uv") {
       localStorage.setItem("uv", "true")
@@ -74,7 +77,7 @@ let eventKey = localStorage.getItem("eventKey") || "`"
 let eventKeyRaw = localStorage.getItem("eventKeyRaw") || "`"
 let pLink = localStorage.getItem("pLink") || "https://classroom.google.com/"
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("eventKeyInput").value = eventKeyRaw
   document.getElementById("linkInput").value = pLink
 
@@ -85,12 +88,12 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 const eventKeyInput = document.getElementById("eventKeyInput")
-eventKeyInput.addEventListener("input", function () {
+eventKeyInput.addEventListener("input", () => {
   eventKey = eventKeyInput.value.split(",")
 })
 
 var linkInput = document.getElementById("linkInput")
-linkInput.addEventListener("input", function () {
+linkInput.addEventListener("input", () => {
   pLink = linkInput.value
 })
 
@@ -106,15 +109,13 @@ function saveEventKey() {
 var dropdown = document.getElementById("dropdown")
 var options = dropdown.getElementsByTagName("option")
 
-var sortedOptions = Array.from(options).sort(function (a, b) {
-  return a.textContent.localeCompare(b.textContent)
-})
+var sortedOptions = Array.from(options).sort((a, b) => a.textContent.localeCompare(b.textContent))
 
 while (dropdown.firstChild) {
   dropdown.removeChild(dropdown.firstChild)
 }
 
-sortedOptions.forEach(function (option) {
+sortedOptions.forEach((option) => {
   dropdown.appendChild(option)
 })
 
@@ -162,7 +163,7 @@ function redirectToMainDomain() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function (event) {
+document.addEventListener("DOMContentLoaded", (event) => {
   const icon = document.getElementById("tab-favicon")
   const name = document.getElementById("tab-title")
   var selectedValue = localStorage.getItem("selectedOption") || "Default"
@@ -193,9 +194,9 @@ function updateHeadSection(selectedValue) {
   }
 }
 // Background Image
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   var saveButton = document.getElementById("save-button")
-  saveButton.addEventListener("click", function () {
+  saveButton.addEventListener("click", () => {
     var backgroundInput = document.getElementById("background-input")
     var imageURL = backgroundInput.value
 
@@ -208,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 
   var resetButton = document.getElementById("reset-button")
-  resetButton.addEventListener("click", function () {
+  resetButton.addEventListener("click", () => {
     localStorage.removeItem("backgroundImage")
     document.body.style.backgroundImage = "url('default-background.jpg')"
   })
@@ -247,7 +248,7 @@ if (themeId == "") {
 document.getElementsByClassName("td")[0].value = themeId
 
 const themeDropdown = document.getElementsByClassName("td")
-dropdown.addEventListener("change", function () {
+dropdown.addEventListener("change", () => {
   const selectedValue = dropdown.value
 
   localStorage.setItem("theme", selectedValue)
@@ -316,9 +317,9 @@ function AB() {
 
 function toggleAB() {
   ab = localStorage.getItem("ab")
-  if (ab == null) {
+  if (!ab) {
     localStorage.setItem("ab", "false")
-  } else if (ab == "true") {
+  } else if (ab === "true") {
     localStorage.setItem("ab", "false")
   } else {
     localStorage.setItem("ab", "true")
@@ -354,7 +355,7 @@ function SaveEngine() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   var selectedEngineName = localStorage.getItem("enginename")
   var dropdown = document.getElementById("engine")
   if (selectedEngineName) {

@@ -14,7 +14,7 @@
   {
     "name": "ZeroGPT.com",
     "link": "https://www.zerogpt.com/",
-    "image": "/assets/media/icons/zg.png",
+    "image": "/assets/media/icons/zg.webp",
     "categories": ["all", "ad"]
   },
   {
@@ -88,7 +88,6 @@
   {
     "name": "FreedomGPT",
     "link": "https://chat.freedomgpt.com/",
-    "image": "/assets/media/icons/default-t.png",
     "categories": ["all", "ai"]
   },
   {

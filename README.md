@@ -32,16 +32,21 @@
 
 ### Server Deployment
 
-You must run these commands on your server:  
-`git clone https://github.com/InterstellarNetwork/interstellar`  
-`cd interstellar`  
-`npm install`  
-`npm start`
+You must run these commands on your server:
+
+```bash
+git clone https://github.com/InterstellarNetwork/Interstellar
+cd Interstellar
+npm install
+npm start
+```
 
 ### Updating
 
-`cd interstellar`  
-`git pull --force --allow-unrelated-histories`
+```bash
+cd Interstellar
+git pull --force --allow-unrelated-histories # may overwrite changes!
+```
 
 <a target="_blank" href="https://heroku.com/deploy/?template=https://github.com/interstellarnetwork/interstellar"><img alt="Deploy to Heroku" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/heroku.svg"></a>
 <a target="_blank" href="https://app.koyeb.com/deploy?type=git&repository=github.com/interstellarnetwork/interstellar"><img alt="Deploy to Koyeb" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg"></a>
@@ -57,6 +62,8 @@ This includes methods of deploying to Render/OnRender.
 As of January 1st, 2024, Replit is [no longer free](https://blog.replit.com/hosting-changes). Try GitHub Codespaces instead.
 
 ### GitHub Codespaces
+
+> If you're setting the port below 1023, then you must run `sudo PORT=1023`
 
 1. Create a GitHub account if you haven't already.
 2. Click "Code" (green button) and then "Create Codespace on main."
