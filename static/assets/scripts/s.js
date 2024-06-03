@@ -299,7 +299,7 @@ function AB() {
       doc.head.appendChild(link)
       doc.body.appendChild(iframe)
 
-      const pLink = localStorage.getItem(encodeURI("pLink")) || "https://www.nasa.gov/"
+      const pLink = localStorage.getItem(encodeURI("pLink")) || getRandomURL()
       location.replace(pLink)
 
       const script = doc.createElement("script")
@@ -362,3 +362,21 @@ document.addEventListener("DOMContentLoaded", () => {
     dropdown.value = selectedEngineName
   }
 })
+
+function getRandomURL() {
+  let randomURLS = [
+    "https://kahoot.it",
+    "https://classroom.google.com",
+    "https://drive.google.com",
+    "https://google.com",
+    "https://docs.google.com",
+    "https://slides.google.com",
+    "https://www.nasa.gov",
+    "https://blooket.com",
+  ]
+  return randomURLS[randRange(0, randomURLS.length)]
+}
+
+function randRange(min, max) {
+  return Math.floor(Math.random() * (max - min) + min)
+}
