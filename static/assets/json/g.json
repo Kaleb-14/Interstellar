@@ -6,6 +6,12 @@
     "custom": "true"
   },
   {
+    "name": "! Interstellar FAQ/Docs",
+    "image": "/assets/media/icons/help_center_googlefonts.png",
+    "link": "https://docs.gointerstellar.app",
+    "categories": ["all"]
+  },
+  {
     "name": "! [NEW] Request A Game",
     "link": "https://forms.gle/vwdHN3iPz5cLaHaMA",
     "image": "/assets/media/icons/request.webp",
@@ -678,12 +684,6 @@
     "categories": ["all,", "emu"]
   },
   {
-    "name": "Super Mario Bros",
-    "link": "https://topoi.pooq.com/hendrik/notmine/FullScreenMario/mario.html",
-    "image": "/assets/media/icons/SMB.webp",
-    "categories": ["all,", "emu"]
-  },
-  {
     "name": "Survivor.io",
     "link": "https://html5.gamedistribution.com/rvvASMiM/f1c451e586c04b4c8cba01b0c50d9090/index.html",
     "image": "/assets/media/icons/SVI.webp",
@@ -1117,7 +1117,7 @@
   },
   {
     "name": "MooMoo.io",
-    "link": "https:/moomoo.io",
+    "link": "https://moomoo.io",
     "image": "/assets/media/icons/moo.webp",
     "categories": ["all"]
   },
@@ -1128,7 +1128,7 @@
     "categories": ["all"]
   },
   {
-    "name": "Mr.Mine",
+    "name": "Mr. Mine",
     "link": "https://www.coolmathgames.com/0-mr-mine/play",
     "image": "/assets/media/icons/mrmine.webp",
     "categories": ["all"]
@@ -1753,13 +1753,19 @@
   },
   {
     "name": "Minecraft 1.5.2 (Eaglercraft)",
-    "link": "/e/1/ec-15/index.html",
+    "link": "/e/2/eag15/index.html",
     "image": "/assets/media/icons/mc.webp",
     "categories": ["all", "2P", "emu", "local"]
   },
   {
     "name": "Minecraft 1.8 (Eaglercraft)",
-    "link": "/e/1/ec-18/index.html",
+    "link": "/e/2/eag18/offline.html",
+    "image": "/assets/media/icons/mc.webp",
+    "categories": ["all", "2P", "emu", "local"]
+  },
+  {
+    "name": "Minecraft 1.8 (Eagler WASM)",
+    "link": "/e/2/eag18/wasm.html",
     "image": "/assets/media/icons/mc.webp",
     "categories": ["all", "2P", "emu", "local"]
   },
@@ -1768,13 +1774,6 @@
     "link": "https://www.twoplayergames.org/embed/getaway-shootout",
     "image": "/assets/media/icons/getaway.webp",
     "categories": ["all", "2P"]
-  },
-  {
-    "name": "Eaglercraft 1.5.2 [Singleplayer]",
-    "link": "https://interstellar-assets.pages.dev/minecraft-15/",
-    "image": "/assets/media/icons/mc.webp",
-    "categories": ["all", "2P", "emu"],
-    "blank": "true"
   },
   {
     "name": "2048",
@@ -1888,6 +1887,71 @@
     "name": "Cooking Mama",
     "link": "https://seraph.reveriestudios.online/games/cookingmama/index.html",
     "image": "/assets/media/icons/cookingmama.jpg",
+    "categories": ["all", "emu"]
+  },
+  {
+    "name": "Wordle",
+    "link": "https://www.nytimes.com/games/wordle/index.html",
+    "image": "/assets/media/icons/w.webp",
+    "categories": ["all"]
+  },
+  {
+    "name": "Wordle Unlimited",
+    "link": "https://wordleunlimited.org/",
+    "image": "/assets/media/icons/w.webp",
+    "categories": ["all"]
+  },
+  {
+    "name": "Wordly",
+    "link": "https://wordly.org/",
+    "image": "/assets/media/icons/w.webp",
+    "categories": ["all"]
+  },
+  {
+    "name": "Connections",
+    "link": "https://www.nytimes.com/games/connections",
+    "image": "/assets/media/icons/cn.png",
+    "categories": ["all"]
+  },
+  {
+    "name": "Connections Unlimited",
+    "link": "https://1games.io/game/connections-game/",
+    "image": "/assets/media/icons/cn.png",
+    "categories": ["all"]
+  },
+  {
+    "name": "Globle",
+    "link": "https://globle.org/?",
+    "image": "/assets/media/icons/cn.png",
+    "categories": ["all"]
+  },
+  {
+    "name": "Particle Clicker",
+    "link": "/e/1/particle-clicker/index.html",
+    "image": "/assets/media/icons/pc.png",
+    "categories": ["all,", "local"]
+  },
+  {
+    "name": "ShipCraft.io",
+    "link": "https://shipcraft.io/",
+    "categories": ["all"]
+  },
+  {
+    "name": "Super Mario Bros.",
+    "link": "https://emulator-games.pages.dev/nes/Super Mario Bros.",
+    "image": "/assets/media/icons/emulator/smb.webp",
+    "categories": ["all", "emu"]
+  },
+  {
+    "name": "Super Mario Bros. 2",
+    "link": "https://emulator-games.pages.dev/nes/Super Mario Bros. 2",
+    "image": "/assets/media/icons/emulator/smb2.webp",
+    "categories": ["all", "emu"]
+  },
+  {
+    "name": "Super Mario Bros. 3",
+    "link": "https://emulator-games.pages.dev/nes/Super Mario Bros. 3",
+    "image": "/assets/media/icons/emulator/smb3.webp",
     "categories": ["all", "emu"]
   }
 ]

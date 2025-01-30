@@ -46,6 +46,14 @@ You must run these commands on your server:
 git clone https://github.com/UseInterstellar/Interstellar
 cd Interstellar
 ```
+
+#### Ad-Free Deployment
+
+```bash
+git clone --branch Ad-Free https://github.com/UseInterstellar/Interstellar
+cd Interstellar
+```
+
 Next depending on your package manager, run one of the following commands:
 
 #### Bun
@@ -84,7 +92,6 @@ git pull --force --allow-unrelated-histories # This may overwrite your local cha
 
 <a target="_blank" href="https://heroku.com/deploy/?template=https://github.com/UseInterstellar/Interstellar"><img alt="Deploy to Heroku" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/heroku.svg"></a>
 <a target="_blank" href="https://app.koyeb.com/deploy?type=git&repository=github.com/UseInterstellar/Interstellar"><img alt="Deploy to Koyeb" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg"></a>
-<a target="_blank" href="https://app.cyclic.sh/api/app/deploy/UseInterstellar/Interstellar"><img alt="Deploy to Cyclic" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/cyclic.svg"></a>
 
 ### Deployment Alternatives
 
@@ -105,7 +112,8 @@ As of January 1st, 2024, Replit is [no longer free](https://blog.replit.com/host
 3. In the terminal at the bottom, paste `pnpm i && pnpm start`.
 4. Respond to the application popup by clicking "Make public."
 > [!IMPORTANT]
-> Make sure you click the "Make public." button, or the proxy won't function properly.
+> Make sure you click the "Make public." button, or the proxy won't function properly.<br>
+> If you get a Range Error, go back and make sure you clicked Make public!
 5. Access the deployed website from the ports tab.
 6. For subsequent uses in the same codespace, just run `pnpm start`
 
